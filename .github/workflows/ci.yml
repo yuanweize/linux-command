@@ -53,6 +53,9 @@ jobs:
       - name: Copy contributors
         run: cp CONTRIBUTORS.svg .deploy
 
+      - name: Create CNAME for custom domain
+        run: echo "command.yuanweize.win" > .deploy/CNAME
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
